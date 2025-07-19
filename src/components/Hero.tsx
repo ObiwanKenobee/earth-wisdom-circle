@@ -35,6 +35,28 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* SEO Hidden Content for Better Indexing */}
+      <div className="sr-only">
+        <h1>Regenerative Planetary Forum - Sacred Civic Diplomacy for Earth Healing</h1>
+        <p>
+          Join 144 indigenous delegates, youth climate leaders, and earth guardians in healing our planet 
+          through regenerative governance, sacred civic diplomacy, and indigenous wisdom. Our planetary 
+          council bridges ancient earth knowledge with cutting-edge AI for collective intelligence and 
+          bioregional democracy. Experience the convergence of indigenous technology, sacred activism, 
+          and regenerative solutions for climate justice and earth stewardship.
+        </p>
+        <p>
+          Keywords: indigenous wisdom, regenerative governance, sacred civic diplomacy, planetary AI, 
+          earth healing, climate solutions, indigenous technology, bioregional democracy, sacred activism, 
+          earth stewardship, regenerative economics, indigenous rights, climate justice, earth wisdom, 
+          sacred sites, planetary health, collective intelligence, indigenous elders, youth climate leadership, 
+          regenerative culture, indigenous knowledge systems, earth regeneration, planetary healing, 
+          sacred diplomacy, ecological restoration, indigenous voices, climate action, sustainable future, 
+          earth alliance, regenerative movement, indigenous leadership, planetary consciousness, earth medicine, 
+          sacred technology, regenerative democracy, indigenous sovereignty, earth justice, planetary wisdom, 
+          sacred council, indigenous knowledge, earth healing ceremonies, regenerative solutions
+        </p>
+      </div>
       {/* Sacred Background */}
       <div className="absolute inset-0 bg-gradient-mandala opacity-30" />
       

@@ -1,14 +1,75 @@
+User-agent: *
+Allow: /
+
+# Priority pages for indigenous communities and climate activists
+Allow: /covenant
+Allow: /circle
+Allow: /scorecard
+Allow: /events
+Allow: /governance
+Allow: /labs
+Allow: /academy
+
+# Sacred sites and bioregional content
+Allow: /bioregions/*
+Allow: /indigenous/*
+Allow: /youth/*
+Allow: /elders/*
+
+# Multilingual support for global reach
+Allow: /sw/*
+Allow: /hi/*
+Allow: /mi/*
+
+# Sitemap for search engines
+Sitemap: https://regenerativeplanetaryforum.org/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://regenerativeplanetaryforum.org/sitemap-delegates.xml
+Sitemap: https://regenerativeplanetaryforum.org/sitemap-events.xml
+Sitemap: https://regenerativeplanetaryforum.org/sitemap-indigenous.xml
+
+# Crawl delay to respect server resources
+Crawl-delay: 1
+
+# Special instructions for different bot types
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-
-User-agent: Twitterbot
-Allow: /
+Crawl-delay: 2
 
 User-agent: facebookexternalhit
 Allow: /
+Crawl-delay: 1
 
-User-agent: *
+User-agent: Twitterbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Archive bots for preserving indigenous knowledge
+User-agent: ia_archiver
+Allow: /
+
+# Academic and research bots
+User-agent: CiteSeerXBot
+Allow: /
+
+User-agent: ScholarBot
+Allow: /
+
+# Block harmful bots while allowing beneficial ones
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
