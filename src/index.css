@@ -2,41 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Sacred Planetary Design System - Renaissance meets Afrofuturism
+All colors MUST be HSL. Inspired by sacred geometry, earth wisdom, and cosmic regeneration.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Earth & Cosmic Foundation */
+    --background: 145 15% 8%;              /* Deep forest cosmic */
+    --foreground: 45 100% 92%;             /* Sacred moonlight */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Sacred Interface Elements */
+    --card: 145 20% 12%;                   /* Earth vessel */
+    --card-foreground: 45 95% 88%;         /* Golden wisdom text */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 145 25% 10%;                /* Sacred grove */
+    --popover-foreground: 45 90% 90%;      /* Pure light text */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sacred Primary - Golden Wisdom */
+    --primary: 45 85% 55%;                 /* Sacred gold */
+    --primary-foreground: 145 30% 10%;     /* Deep earth text */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Earth Secondary - Living Forest */
+    --secondary: 145 35% 25%;              /* Living forest */
+    --secondary-foreground: 45 100% 95%;   /* Light on earth */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Cosmic Muted - Twilight Wisdom */
+    --muted: 145 20% 18%;                  /* Cosmic twilight */
+    --muted-foreground: 45 40% 70%;        /* Gentle golden glow */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Sacred Accent - Regenerative Life */
+    --accent: 120 60% 45%;                 /* Regenerative green */
+    --accent-foreground: 145 15% 8%;       /* Deep earth contrast */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warning Earth - Sacred Fire */
+    --destructive: 15 85% 55%;             /* Sacred fire warning */
+    --destructive-foreground: 45 100% 98%; /* Pure light */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Sacred Boundaries */
+    --border: 145 25% 20%;                 /* Cosmic boundary */
+    --input: 145 25% 15%;                  /* Sacred input vessel */
+    --ring: 45 85% 65%;                    /* Golden focus ring */
 
-    --radius: 0.5rem;
+    /* Sacred Proportions */
+    --radius: 0.618rem;                    /* Golden ratio radius */
+
+    /* Custom Sacred Design Tokens */
+    --sacred-gold: 45 85% 55%;             /* Primary sacred gold */
+    --cosmic-purple: 270 60% 25%;          /* Deep cosmic wisdom */
+    --earth-brown: 25 45% 35%;             /* Rich earth foundation */
+    --regenerative-green: 120 60% 45%;     /* Living regeneration */
+    --ancestral-copper: 25 75% 45%;        /* Ancestral wisdom */
+    --stellar-blue: 210 85% 35%;           /* Cosmic connection */
+
+    /* Sacred Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--cosmic-purple)), hsl(var(--stellar-blue)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--earth-brown)), hsl(var(--regenerative-green)));
+    --gradient-sacred: linear-gradient(45deg, hsl(var(--sacred-gold)), hsl(var(--ancestral-copper)));
+    --gradient-mandala: radial-gradient(circle, hsl(var(--sacred-gold) / 0.2), hsl(var(--cosmic-purple) / 0.1));
+
+    /* Sacred Shadows */
+    --shadow-sacred: 0 8px 32px hsl(var(--sacred-gold) / 0.15);
+    --shadow-cosmic: 0 16px 48px hsl(var(--cosmic-purple) / 0.2);
+    --shadow-earth: 0 4px 16px hsl(var(--earth-brown) / 0.3);
+
+    /* Sacred Animations */
+    --transition-sacred: all 0.618s cubic-bezier(0.618, 0, 0.382, 1);
+    --transition-mandala: transform 60s linear infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +132,150 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-serif;
+    background-image: var(--gradient-mandala);
+  }
+}
+
+@layer components {
+  /* Sacred Navigation */
+  .sacred-nav {
+    @apply backdrop-blur-md bg-card/80 border-b border-border/50;
+    box-shadow: var(--shadow-sacred);
+  }
+
+  /* Sacred Hero Button */
+  .hero-button {
+    @apply relative overflow-hidden px-8 py-4 rounded-full font-semibold tracking-wide;
+    background: var(--gradient-sacred);
+    color: hsl(var(--primary-foreground));
+    transition: var(--transition-sacred);
+    box-shadow: var(--shadow-sacred);
+  }
+
+  .hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-cosmic);
+  }
+
+  .hero-button::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: var(--gradient-cosmic);
+  }
+
+  .hero-button:hover::before {
+    @apply opacity-100;
+  }
+
+  .hero-button span {
+    @apply relative z-10;
+  }
+
+  /* Sacred Card */
+  .sacred-card {
+    @apply p-6 rounded-lg border border-border/30 backdrop-blur-sm;
+    background: linear-gradient(135deg, hsl(var(--card) / 0.8), hsl(var(--muted) / 0.4));
+    box-shadow: var(--shadow-earth);
+    transition: var(--transition-sacred);
+  }
+
+  .sacred-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-cosmic);
+    border-color: hsl(var(--primary) / 0.5);
+  }
+
+  /* Mandala Animation */
+  .mandala-spin {
+    animation: mandala-rotation 60s linear infinite;
+  }
+
+  .pulse-sacred {
+    animation: pulse-sacred 4s ease-in-out infinite;
+  }
+
+  /* Sacred Scroll Reveal */
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-reveal.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@layer utilities {
+  /* Custom Gradient Utilities */
+  .bg-gradient-cosmic {
+    background: var(--gradient-cosmic);
+  }
+
+  .bg-gradient-earth {
+    background: var(--gradient-earth);
+  }
+
+  .bg-gradient-sacred {
+    background: var(--gradient-sacred);
+  }
+
+  .bg-gradient-mandala {
+    background: var(--gradient-mandala);
+  }
+
+  /* Sacred Text Utilities */
+  .text-sacred-gold {
+    color: hsl(var(--sacred-gold));
+  }
+
+  .text-cosmic-purple {
+    color: hsl(var(--cosmic-purple));
+  }
+
+  .text-earth-brown {
+    color: hsl(var(--earth-brown));
+  }
+
+  .text-regenerative-green {
+    color: hsl(var(--regenerative-green));
+  }
+
+  .text-ancestral-copper {
+    color: hsl(var(--ancestral-copper));
+  }
+
+  .text-stellar-blue {
+    color: hsl(var(--stellar-blue));
+  }
+
+  /* Sacred Border Utilities */
+  .border-sacred-gold {
+    border-color: hsl(var(--sacred-gold));
+  }
+
+  .border-cosmic-purple {
+    border-color: hsl(var(--cosmic-purple));
+  }
+}
+
+/* Sacred Keyframes */
+@keyframes mandala-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-sacred {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }

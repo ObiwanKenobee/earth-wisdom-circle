@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Sacred Planetary Color System
+				'sacred-gold': 'hsl(var(--sacred-gold))',
+				'cosmic-purple': 'hsl(var(--cosmic-purple))',
+				'earth-brown': 'hsl(var(--earth-brown))',
+				'regenerative-green': 'hsl(var(--regenerative-green))',
+				'ancestral-copper': 'hsl(var(--ancestral-copper))',
+				'stellar-blue': 'hsl(var(--stellar-blue))'
+			},
+			fontFamily: {
+				serif: ['Playfair Display', 'serif'],
+				sans: ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
